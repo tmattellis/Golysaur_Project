@@ -24,7 +24,7 @@ public class Basic_enemy : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        rigidbody.AddForce(Vector2.left * signed * speed/100, ForceMode2D.Impulse);
+        rigidbody.AddForce(Vector2.left * signed * speed);
         if (timer > time_before_turn)
         {
             

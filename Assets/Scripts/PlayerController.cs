@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -126,6 +127,10 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.GetComponent<ProjectileStar>())
         {
             projectileTimer = 15f;
+        }
+
+        if(other.gameObject.layer == LayerMask.NameToLayer("Enemies")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
