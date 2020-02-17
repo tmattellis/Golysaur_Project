@@ -128,9 +128,9 @@ public class PlayerController : MonoBehaviour
             projectileTimer = 15f;
         }
 
-        if(other.gameObject.GetComponent<Door>())
-        {
-            transform.position = new Vector3(-8.2f,-1f,0f);
-        }
+        // if(other.gameObject.GetComponent<Door>())
+        // {
+        //     transform.position = new Vector3(-8.2f,-1f,0f);
+        // }
     }
 }
