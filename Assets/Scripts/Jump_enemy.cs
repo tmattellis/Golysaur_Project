@@ -27,4 +27,11 @@ public class Jump_enemy : MonoBehaviour
             jump_timer = 0;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.layer == LayerMask.NameToLayer("Background2")){
+            Destroy(gameObject);
+        }
+    }
 }

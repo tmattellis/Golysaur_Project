@@ -10,7 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public double highJumpTimer;
     public double speedTimer;
-    public double projectileTimer;
+    public int projectileNum;
+    public int startProjectileNum;
+    public int projectileIncrement;
 
     public GameObject projectilePrefab;
 
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        projectileNum = startProjectileNum;
     }
 
     // Update is called once per frame
@@ -67,13 +70,28 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.D))
         {
-            if(projectileTimer > 0)
+            if(projectileNum > 0)
             {
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * 10f;
+                projectileNum --;
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            if(projectileNum > 0)
+            {
+                GameObject newProjectile = Instantiate(projectilePrefab);
+                newProjectile.transform.position = transform.position;
+                newProjectile.transform.rotation = transform.rotation;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
+                newProjectile.GetComponent<SpriteRenderer>().flipX = true;
+                projectileNum --;
             }
         }
 
@@ -85,10 +103,6 @@ public class PlayerController : MonoBehaviour
         if(speedTimer > 0)
         {
             speedTimer = speedTimer - Time.deltaTime;
-        }
-        if(projectileTimer > 0)
-        {
-            projectileTimer = projectileTimer - Time.deltaTime;
         }
     }
 
@@ -126,11 +140,18 @@ public class PlayerController : MonoBehaviour
 
         if(other.gameObject.GetComponent<ProjectileStar>())
         {
-            projectileTimer = 15f;
+            projectileNum += projectileIncrement;
         }
 
         if(other.gameObject.layer == LayerMask.NameToLayer("Enemies")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    private GUIStyle guiStyle = new GUIStyle();
+    void OnGUI()
+    {
+        guiStyle.fontSize = 35;
+        GUI.Label(new Rect(10, 900, 100, 20), "Arrows Left: " + projectileNum.ToString(), guiStyle);
     }
 }

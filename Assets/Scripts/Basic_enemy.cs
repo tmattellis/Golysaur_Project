@@ -32,4 +32,11 @@ public class Basic_enemy : MonoBehaviour
             timer = 0;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.layer == LayerMask.NameToLayer("Background2")){
+            Destroy(gameObject);
+        }
+    }
 }
