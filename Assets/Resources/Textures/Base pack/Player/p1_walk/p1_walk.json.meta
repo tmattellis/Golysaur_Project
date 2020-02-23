@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d3c96d85e83cd6d458cee43bdbed1f95
+=======
+guid: be542551a9eb4e248a6a10d596cb0f45
+>>>>>>> Thomas
 TextScriptImporter:
   externalObjects: {}
   userData: 
