@@ -9,7 +9,6 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = transform.right * 10f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
