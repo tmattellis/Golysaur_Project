@@ -26,8 +26,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         // move player left
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             if(speedTimer > 0)
             {
@@ -54,19 +55,58 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            if(jumpsLeft > 0)
-            {
-                jumpsLeft--;
 
-                if(highJumpTimer > 0)
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                Debug.Log("right1");
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, 0.6f);
+                 
+
+                for (int i = 0; i < hits.Length; i++)
                 {
-                    rigidbody.AddForce(Vector2.up * 20f, ForceMode2D.Impulse);
-                }
-                else
-                {
-                    rigidbody.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+                    RaycastHit2D hit = hits[i];
+
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                    {
+                        rigidbody.AddForce((Vector2.left + Vector2.up) * 15f, ForceMode2D.Impulse);
+                        Debug.Log("right2");
+                    }
                 }
             }
+            else if(Input.GetKey(KeyCode.LeftArrow)){
+                Debug.Log("left1");
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.right, 0.6f);
+
+
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    RaycastHit2D hit = hits[i];
+
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                    {
+                        rigidbody.AddForce((Vector2.right + Vector2.up) * 15f, ForceMode2D.Impulse);
+                        Debug.Log("left2");
+                    }
+                }
+            }
+            else
+            {
+                if (jumpsLeft > 0)
+                {
+                    jumpsLeft--;
+
+                    if (highJumpTimer > 0)
+                    {
+                        rigidbody.AddForce(Vector2.up * 20f, ForceMode2D.Impulse);
+                    }
+                    else
+                    {
+                        rigidbody.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
+                    }
+                }
+            }
+
+            
         }
 
 
@@ -113,8 +153,9 @@ public class PlayerController : MonoBehaviour
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.up, 0.7f);
             // Debug.DrawRay(transform.position, -transform.up *0.7f); // Vizualize RayCast
-            
-            for(int i=0; i < hits.Length; i++)
+            //Debug.DrawRay(transform.position, transform.right * 0.5f); // Vizualize RayCast
+
+            for (int i=0; i < hits.Length; i++)
             {
                 RaycastHit2D hit = hits[i];
 
