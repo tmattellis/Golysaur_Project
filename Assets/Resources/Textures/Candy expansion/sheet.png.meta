@@ -1,13 +1,9 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-<<<<<<< HEAD
 guid: 2e4d1ace49a5ff04196694f51c4e5761
 =======
 guid: e7444d2d1ca7375438d4a062f4f9776d
 >>>>>>> Thomas
-=======
-guid: b0b5afc9353d84d0a837daafb9567544
->>>>>>> master
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,27 +45,19 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
 <<<<<<< HEAD
-<<<<<<< HEAD
   spriteMode: 2
 =======
   spriteMode: 1
 >>>>>>> Thomas
-=======
-  spriteMode: 1
->>>>>>> master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
-<<<<<<< HEAD
   spritePixelsToUnits: 70
 =======
   spritePixelsToUnits: 100
 >>>>>>> Thomas
-=======
-  spritePixelsToUnits: 100
->>>>>>> master
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,7 +82,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: Standalone
@@ -122,8 +109,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
 =======
 >>>>>>> Thomas
-=======
->>>>>>> master
   spriteSheet:
     serializedVersion: 2
     sprites: []
