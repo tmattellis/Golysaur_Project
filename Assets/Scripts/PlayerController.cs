@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
                 if(highJumpTimer > 0)
                 {
-                    rigidbody.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+                    rigidbody.AddForce(Vector2.up * 20f, ForceMode2D.Impulse);
                 }
                 else
                 {
@@ -127,5 +127,10 @@ public class PlayerController : MonoBehaviour
         {
             projectileTimer = 15f;
         }
+
+        // if(other.gameObject.GetComponent<Door>())
+        // {
+        //     transform.position = new Vector3(-8.2f,-1f,0f);
+        // }
     }
 }
