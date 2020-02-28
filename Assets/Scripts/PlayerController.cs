@@ -157,6 +157,6 @@ public class PlayerController : MonoBehaviour
     void OnGUI()
     {
         guiStyle.fontSize = 35;
-        GUI.Label(new Rect(10, 800, 100, 20), "Arrows Left: " + projectileNum.ToString(), guiStyle);
+        GUI.Label(new Rect(10, 900, 100, 20), "Arrows Left: " + projectileNum.ToString(), guiStyle);
     }
 }
