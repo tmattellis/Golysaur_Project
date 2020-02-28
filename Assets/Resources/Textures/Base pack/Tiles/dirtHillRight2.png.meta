@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a6ba837b770614f6bb58d14c78ac67c0
+=======
+guid: 69e2aa9f57b3b4a4bb9f7f3b42103e4b
+>>>>>>> Thomas
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

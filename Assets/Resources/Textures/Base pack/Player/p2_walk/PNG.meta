@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3fee536cdf0f344a4b179524e04f4356
+=======
+guid: dbe4aedae2c19454ea31cea1f2edd753
+>>>>>>> Thomas
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
