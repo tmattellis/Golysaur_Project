@@ -89,8 +89,8 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            else
-            {
+            // else
+            // {
                 if (jumpsLeft > 0)
                 {
                     jumpsLeft--;
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
                         rigidbody.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
                     }
                 }
-            }
+            //}
 
 
         }
