@@ -38,7 +38,7 @@ public class Fly_enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Background2")){
+        if(other.gameObject.layer == LayerMask.NameToLayer("Projectile")){
             Destroy(gameObject);
         }
     }
