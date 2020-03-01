@@ -326,6 +326,8 @@ MonoBehaviour:
   projectileIncrement: 5
   projectilePrefab: {fileID: 94595997338729905, guid: 9a62957a7915c9f4c8f54931439cdade,
     type: 3}
+  fireballPrefab: {fileID: 5532870804153084029, guid: b152297c1a4b142dd9d543443223340b,
+    type: 3}
 --- !u!50 &352835638
 Rigidbody2D:
   serializedVersion: 4
