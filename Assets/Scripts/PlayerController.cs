@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int projectileIncrement;
 
     public GameObject projectilePrefab;
+    public GameObject fireballPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +132,18 @@ public class PlayerController : MonoBehaviour
                 newProjectile.transform.rotation = transform.rotation;
                 newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
                 newProjectile.GetComponent<SpriteRenderer>().flipX = true;
+                projectileNum--;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (projectileNum > 0)
+            {
+                GameObject newProjectile = Instantiate(fireballPrefab);
+                newProjectile.transform.position = transform.position;
+                newProjectile.transform.rotation = transform.rotation;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * 5f;
                 projectileNum--;
             }
         }
