@@ -21,6 +21,8 @@ TagManager:
   - Enemy
   - Destructible
   - 
+  - Friendly
+  - Projectile
   - 
   - 
   - 
