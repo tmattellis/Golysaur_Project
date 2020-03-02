@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - Background1
-  - Background2
-  - Player
   - Ground
-  - Items
+  - PlayerProjectile
+  - Player
+  - 
+  - 
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: map
+    uniqueID: 4181262287
+    locked: 0
+  - name: background
+    uniqueID: 1659075115
     locked: 0
