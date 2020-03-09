@@ -109,7 +109,13 @@ public class PlayerController : MonoBehaviour
 
 
         }
-
+        
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            rigidbody.gravityScale *= -1;
+            rigidbody.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+            transform.rotation = Quaternion.AngleAxis(180, Vector3.right);
+        }
 
         if (Input.GetKeyDown(KeyCode.D))
         {

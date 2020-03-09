@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Thomas\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Thomas\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Golysaur_Project.350915569.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Thomas\Golysaur_Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="Textures" t="Include">
+            <e p="Base pack" t="Include">
+              <e p="Enemies" t="Include">
+                <e p="enemies_spritesheet.txt" t="Include" />
+              </e>
+              <e p="HUD" t="Include">
+                <e p="hud_spritesheet.xml" t="Include" />
+              </e>
+              <e p="Items" t="Include">
+                <e p="items_spritesheet.xml" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="p1_spritesheet.txt" t="Include" />
+                <e p="p2_spritesheet.txt" t="Include" />
+                <e p="p3_spritesheet.txt" t="Include" />
+              </e>
+              <e p="Tiles" t="Include">
+                <e p="tiles_spritesheet.xml" t="Include" />
+              </e>
+            </e>
+            <e p="Extra animations and enemies" t="Include">
+              <e p="Spritesheets" t="Include">
+                <e p="alienBeige.xml" t="Include" />
+                <e p="alienBlue.xml" t="Include" />
+                <e p="alienGreen.xml" t="Include" />
+                <e p="alienPink.xml" t="Include" />
+                <e p="aliens.xml" t="Include" />
+                <e p="alienYellow.xml" t="Include" />
+                <e p="enemies.xml" t="Include" />
+              </e>
+            </e>
+            <e p="Mushroom expansion" t="Include">
+              <e p="PNG" t="Include">
+                <e p="spritesheet.xml" t="Include" />
+              </e>
+            </e>
+            <e p="Spritesheet" t="Include">
+              <e p="spritesheet_complete.xml" t="Include" />
+              <e p="spritesheet_enemies.xml" t="Include" />
+              <e p="spritesheet_items.xml" t="Include" />
+              <e p="spritesheet_other.xml" t="Include" />
+              <e p="spritesheet_players.xml" t="Include" />
+              <e p="spritesheet_tiles.xml" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Basic_enemy.cs" t="Include" />
+          <e p="BottomBounds.cs" t="Include" />
+          <e p="Camera.cs" t="Include" />
+          <e p="Destructible.cs" t="Include" />
+          <e p="Door.cs" t="Include" />
+          <e p="Fly_enemy.cs" t="Include" />
+          <e p="GroundDestroy.cs" t="Include" />
+          <e p="HighJumpGem.cs" t="Include" />
+          <e p="Jump_enemy.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
+          <e p="ProjectileStar.cs" t="Include" />
+          <e p="SpeedGem.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Golysaur_Project.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
