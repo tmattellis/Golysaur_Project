@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: f0156f86d8ca37142aa6e98430f783e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: DG_PRP_TXT_Platform_Wrath_0
+  - first:
+      213: 21300002
+    second: DG_PRP_TXT_Platform_Wrath_1
+  - first:
+      213: 21300004
+    second: DG_PRP_TXT_Platform_Wrath_2
+  - first:
+      213: 21300006
+    second: DG_PRP_TXT_Platform_Wrath_3
+  - first:
+      213: 21300008
+    second: DG_PRP_TXT_Platform_Wrath_4
+  - first:
+      213: 21300010
+    second: DG_PRP_TXT_Platform_Wrath_5
+  - first:
+      213: 21300012
+    second: DG_PRP_TXT_Platform_Wrath_6
+  - first:
+      213: 21300014
+    second: DG_PRP_TXT_Platform_Wrath_7
+  - first:
+      213: 21300016
+    second: Wrath_Platforms_0
+  - first:
+      213: 21300018
+    second: Wrath_Platforms_1
+  - first:
+      213: 21300020
+    second: Wrath_Platforms_2
+  - first:
+      213: 21300022
+    second: Wrath_Platforms_3
+  - first:
+      213: 21300024
+    second: Wrath_Platforms_4
+  - first:
+      213: 21300026
+    second: Wrath_Platforms_5
+  - first:
+      213: 21300028
+    second: Wrath_Platforms_6
+  - first:
+      213: 21300030
+    second: Wrath_Platforms_7
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wrath_Platforms_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 650
+        width: 323
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf56c6d979f743f99190cacdf649f5f
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_1
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 647
+        width: 323
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10c4bb5441bc49afbf4ace788679390
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 271
+        width: 320
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d3d1b83fc0549c695761dbbe43e7f0
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_3
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 271
+        width: 334
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4901d2bc56d47b0b345b78bc3728df
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_4
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 271
+        width: 320
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6456cded41b41ddb37bbab11dbfbbd
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 319
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3fdbfe9d420447aaab90d5641cbab7
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_6
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 324
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bea82ed751eb47a597fd0509786efd0
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wrath_Platforms_7
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 0
+        width: 320
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6f4b6297d4648b98ea78d8bac5e179
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 65bb876da0c844e51b5b717db883117e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

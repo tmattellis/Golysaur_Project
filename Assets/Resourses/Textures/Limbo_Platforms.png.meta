@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 01d7ad6ca27d9ad4682ee8f030314219
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: DG_PRP_TXT_Platform_Limbo_0
+  - first:
+      213: 21300002
+    second: DG_PRP_TXT_Platform_Limbo_1
+  - first:
+      213: 21300004
+    second: DG_PRP_TXT_Platform_Limbo_2
+  - first:
+      213: 21300006
+    second: DG_PRP_TXT_Platform_Limbo_3
+  - first:
+      213: 21300008
+    second: DG_PRP_TXT_Platform_Limbo_4
+  - first:
+      213: 21300010
+    second: DG_PRP_TXT_Platform_Limbo_5
+  - first:
+      213: 21300012
+    second: DG_PRP_TXT_Platform_Limbo_6
+  - first:
+      213: 21300014
+    second: DG_PRP_TXT_Platform_Limbo_7
+  - first:
+      213: 21300016
+    second: Limbo_Platforms_0
+  - first:
+      213: 21300018
+    second: Limbo_Platforms_1
+  - first:
+      213: 21300020
+    second: Limbo_Platforms_2
+  - first:
+      213: 21300022
+    second: Limbo_Platforms_3
+  - first:
+      213: 21300024
+    second: Limbo_Platforms_4
+  - first:
+      213: 21300026
+    second: Limbo_Platforms_5
+  - first:
+      213: 21300028
+    second: Limbo_Platforms_6
+  - first:
+      213: 21300030
+    second: Limbo_Platforms_7
+  - first:
+      213: 21300032
+    second: Limbo_Platforms_8
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Limbo_Platforms_0
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 988
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db50be7e7111248e2b4170963a27a51e
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 652
+        width: 342
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb49e88083cf4420f8eab6ff808cf0c4
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_2
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 652
+        width: 342
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09e0a86664654333a53f26ace08acd1
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 276
+        width: 658
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4a7092c02624ccbbd6b3ebab612f4c
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_4
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 274
+        width: 318
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a79a223391ff4e089c134ee472fff44
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 12
+        width: 322
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994e0da3e0f6941039bf8fe8176608a2
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_6
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 12
+        width: 330
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1c05327dcb44452913ebd6b2e63e0d
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Limbo_Platforms_7
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 12
+        width: 316
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1209bbd8b9440ac8d8929e7be7a322
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8412f4898b98c4fd78bfabe10e755d18
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
