@@ -24,9 +24,22 @@ public class PlayerController : MonoBehaviour
         projectileNum = startProjectileNum;
     }
 
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        //framerate
+        if (Application.targetFrameRate > 60)
+        {
+            Application.targetFrameRate = 60;
+        }
+            
+
         // move player left
         if (Input.GetKey(KeyCode.LeftArrow))
         {
