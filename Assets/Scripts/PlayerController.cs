@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rigidbody;
+    AudioSource audiosrc;
     public int jumpsLeft;
 
     public double highJumpTimer;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        audiosrc = GetComponent<AudioSource>();
         projectileNum = startProjectileNum;
     }
 
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour
                     {
                         rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * 9f, ForceMode2D.Impulse);
                         
+                        
                     }
                 }
             }
@@ -116,6 +119,7 @@ public class PlayerController : MonoBehaviour
                     else
                     {
                         rigidbody.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
+                        audiosrc.Play();
                     }
                 }
             //}
