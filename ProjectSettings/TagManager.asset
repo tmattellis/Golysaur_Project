@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 3914629245
+    locked: 0
+  - name: map
+    uniqueID: 397727257
+    locked: 0
