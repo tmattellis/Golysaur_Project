@@ -18,12 +18,17 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject fireballPrefab;
 
+    SpriteRenderer playerSprite;
+    private int gravScale = 1;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         audiosrc = GetComponent<AudioSource>();
         projectileNum = startProjectileNum;
+
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     void Awake()
@@ -83,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * 9f, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
                         
                         
                     }
@@ -101,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * 9f, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
                         
                     }
                 }
@@ -114,11 +119,11 @@ public class PlayerController : MonoBehaviour
 
                     if (highJumpTimer > 0)
                     {
-                        rigidbody.AddForce(Vector2.up * 16f, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * 16f * gravScale, ForceMode2D.Impulse);
                     }
                     else
                     {
-                        rigidbody.AddForce(Vector2.up * 8f, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * 8f * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
                     }
                 }
@@ -130,8 +135,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             rigidbody.gravityScale *= -1;
+            gravScale *= -1;
             rigidbody.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
-            transform.rotation = Quaternion.AngleAxis(180, Vector3.right);
+            playerSprite.flipY = !playerSprite.flipY;
+            //transform.rotation = Quaternion.AngleAxis(180, Vector3.right);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -187,7 +194,8 @@ public class PlayerController : MonoBehaviour
         // check that we collided with ground
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.up, 0.7f);
+            // multiply by gravScale to account for reversing gravity
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.up * gravScale, 0.7f);
             // Debug.DrawRay(transform.position, -transform.up *0.7f); // Vizualize RayCast
 
             for (int i = 0; i < hits.Length; i++)
