@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 8041651688775584779, guid: 839c4606f6cf54076ae2c787e27cfa36,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8041651688775584779, guid: 839c4606f6cf54076ae2c787e27cfa36,
         type: 3}
@@ -361,7 +361,7 @@ PrefabInstance:
     - target: {fileID: 5029599047672313723, guid: c2d446003e0374b9b96aea8c7128ca09,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5029599047672313723, guid: c2d446003e0374b9b96aea8c7128ca09,
         type: 3}
@@ -2126,6 +2126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739489677}
   - component: {fileID: 1739489676}
+  - component: {fileID: 1739489678}
   m_Layer: 0
   m_Name: Top Boundary
   m_TagString: Untagged
@@ -2143,10 +2144,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 38.913315, y: 5.0148487}
+  m_Offset: {x: 62.858948, y: 5.0148487}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2157,7 +2158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 99.690155, y: 1.5137691}
+  m_Size: {x: 171.06097, y: 1.5137691}
   m_EdgeRadius: 0
 --- !u!4 &1739489677
 Transform:
@@ -2167,12 +2168,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739489675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 36.5, z: -2.9304342}
+  m_LocalPosition: {x: 0.48, y: 44.1, z: -2.9304342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739489678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739489675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a872610ecdb6a2647b984b11478e0097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1894222328
 PrefabInstance:
   m_ObjectHideFlags: 0
