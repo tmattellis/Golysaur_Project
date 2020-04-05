@@ -15,11 +15,18 @@ public class PlayerController : MonoBehaviour
     public int startProjectileNum;
     public int projectileIncrement;
 
+    public static PlayerController instance;
+
+    // outlets
     public GameObject projectilePrefab;
     public GameObject fireballPrefab;
+    
+    // set to false by default
+    public bool antiGravAvailable = false;
 
     SpriteRenderer playerSprite;
     private int gravScale = 1;
+    public bool isPaused;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
     }
@@ -40,6 +48,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPaused)
+        {
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            MenuController.instance.Show();
+        }
+        
         //framerate
         if (Application.targetFrameRate > 60)
         {
@@ -132,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
         }
         
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) && antiGravAvailable)
         {
             rigidbody.gravityScale *= -1;
             gravScale *= -1;
