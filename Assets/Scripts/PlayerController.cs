@@ -107,8 +107,8 @@ public class PlayerController : MonoBehaviour
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
-                        
-                        
+                        audiosrc.Play();
+
                     }
                 }
             }
@@ -125,7 +125,8 @@ public class PlayerController : MonoBehaviour
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
                         rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
-                        
+                        audiosrc.Play();
+
                     }
                 }
             }
@@ -163,6 +164,7 @@ public class PlayerController : MonoBehaviour
         {
             if (projectileNum > 0)
             {
+                SoundManager.instance.PlaySoundArrow();
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
@@ -175,6 +177,7 @@ public class PlayerController : MonoBehaviour
         {
             if (projectileNum > 0)
             {
+                SoundManager.instance.PlaySoundArrow();
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
@@ -188,6 +191,7 @@ public class PlayerController : MonoBehaviour
         {
             if (projectileNum > 0)
             {
+                SoundManager.instance.PlaySoundFireball();
                 GameObject newProjectile = Instantiate(fireballPrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;

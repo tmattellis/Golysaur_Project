@@ -20,6 +20,7 @@ public class Destructible : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Projectile>())
         {
+            SoundManager.instance.PlaySoundImpact();
             Destroy(gameObject);
         }
     }
