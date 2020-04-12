@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public int projectileNum;
     public int startProjectileNum;
     public int projectileIncrement;
+    public int Health;
 
     public static PlayerController instance;
 
@@ -27,6 +28,12 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerSprite;
     private int gravScale = 1;
     public bool isPaused;
+
+    // for ladder
+    bool canClimb = false;
+    float speed = 1;
+    private float inputVertical;
+
 
     // Start is called before the first frame update
     void Start()
@@ -209,6 +216,7 @@ public class PlayerController : MonoBehaviour
         {
             speedTimer = speedTimer - Time.deltaTime;
         }
+        
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -230,6 +238,8 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -249,11 +259,21 @@ public class PlayerController : MonoBehaviour
             projectileNum += projectileIncrement;
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
+		//spike
+
+		if (other.gameObject.GetComponent<Spike>())
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            TakeDamage(10);
+            Debug.Log("Take damage 10");
+
         }
+       
     }
+   
 
     private GUIStyle guiStyle = new GUIStyle();
     void OnGUI()
@@ -261,4 +281,10 @@ public class PlayerController : MonoBehaviour
         guiStyle.fontSize = 35;
         GUI.Label(new Rect(10, 850, 100, 20), "Arrows Left: " + projectileNum.ToString(), guiStyle);
     }
+    void TakeDamage (int dmg)
+	{
+        Health -= dmg; 
+ 	}
+    
+
 }
