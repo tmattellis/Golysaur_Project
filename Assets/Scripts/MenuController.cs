@@ -14,6 +14,8 @@ public class MenuController : MonoBehaviour
     public GameObject controlsMenu;
     public bool isMainMenu = false;
 
+    public GameHandler gameHandler;
+
     void Awake()
     {
         instance = this;

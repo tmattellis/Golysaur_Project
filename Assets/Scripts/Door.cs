@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>())
         {
+            GameHandler.instance.SavePlusLevel();
             SceneManager.LoadScene("SampleScene");
         }
     }

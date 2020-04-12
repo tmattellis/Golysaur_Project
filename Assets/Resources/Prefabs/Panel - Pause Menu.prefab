@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 7231109647073274778}
   - component: {fileID: 7231109647073274781}
   m_Layer: 5
-  m_Name: Button - Ability Menu
+  m_Name: Button - Save Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2830,8 +2830,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7231109645735347963}
-        m_MethodName: ShowAbilityMenu
+      - m_Target: {fileID: 614798509121953667, guid: a09478b9e5e1e44ab9fe79bd823c0d4b,
+          type: 3}
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3270,7 +3271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Abilities
+  m_Text: Save Game
 --- !u!1 &7231109647186430273
 GameObject:
   m_ObjectHideFlags: 0

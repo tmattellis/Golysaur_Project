@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     public int projectileIncrement;
     public int Health;
 
+    //ability modifiers
+    public float speedAbility;
+    public float jumpAbility;
+    public float projectileAbility;
+    public float powerUpAbility;
+
     public static PlayerController instance;
 
     // outlets
@@ -77,11 +83,11 @@ public class PlayerController : MonoBehaviour
         {
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.left * 25f * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (20f + speedAbility) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.left * 14f * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (10f + speedAbility) * Time.deltaTime * 60f);
             }
         }
 
@@ -90,11 +96,11 @@ public class PlayerController : MonoBehaviour
         {
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.right * 25f * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (20f + speedAbility) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.right * 14f * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (10f + speedAbility) * Time.deltaTime * 60f);
             }
         }
 
@@ -113,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * (7f + jumpAbility) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -131,7 +137,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * 9f * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * (7f + jumpAbility) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -145,11 +151,11 @@ public class PlayerController : MonoBehaviour
 
                     if (highJumpTimer > 0)
                     {
-                        rigidbody.AddForce(Vector2.up * 16f * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * (14f + jumpAbility) * gravScale, ForceMode2D.Impulse);
                     }
                     else
                     {
-                        rigidbody.AddForce(Vector2.up * 8f * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * (6f + jumpAbility) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
                     }
                 }
@@ -175,7 +181,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * 10f;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * (5f + projectileAbility);
                 projectileNum--;
             }
         }
@@ -188,7 +194,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -10f;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -(5f+projectileAbility);
                 newProjectile.GetComponent<SpriteRenderer>().flipX = true;
                 projectileNum--;
             }
@@ -202,7 +208,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(fireballPrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * 5f;
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * (2f+projectileAbility);
                 projectileNum--;
             }
         }
@@ -246,17 +252,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.GetComponent<HighJumpGem>())
         {
-            highJumpTimer = 10f;
+            highJumpTimer = 10f + powerUpAbility*2f;
         }
 
         if (other.gameObject.GetComponent<SpeedGem>())
         {
-            speedTimer = 10f;
+            speedTimer = 10f + powerUpAbility*2f;
         }
 
         if (other.gameObject.GetComponent<ProjectileStar>())
         {
-            projectileNum += projectileIncrement;
+            projectileNum += 5 + (int) projectileAbility;
         }
 
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -275,12 +281,9 @@ public class PlayerController : MonoBehaviour
     }
    
 
-    private GUIStyle guiStyle = new GUIStyle();
-    void OnGUI()
-    {
-        guiStyle.fontSize = 35;
-        GUI.Label(new Rect(10, 850, 100, 20), "Arrows Left: " + projectileNum.ToString(), guiStyle);
-    }
+    
+    
+    
     void TakeDamage (int dmg)
 	{
         Health -= dmg; 
