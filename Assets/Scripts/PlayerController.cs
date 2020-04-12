@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, 0.6f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, 1.1f);
 
 
                 for (int i = 0; i < hits.Length; i++)
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
                
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.right, 0.6f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.right, 1.1f); 
 
 
                 for (int i = 0; i < hits.Length; i++)
@@ -217,8 +217,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             // multiply by gravScale to account for reversing gravity
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.up * gravScale, 0.7f);
-            // Debug.DrawRay(transform.position, -transform.up *0.7f); // Vizualize RayCast
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.up * gravScale, 1.1f);
+            //Debug.DrawRay(transform.position, -transform.up *1f); // Vizualize RayCast
 
             for (int i = 0; i < hits.Length; i++)
             {
