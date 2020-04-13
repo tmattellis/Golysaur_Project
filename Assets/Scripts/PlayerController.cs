@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     // outlets
     public GameObject projectilePrefab;
     public GameObject fireballPrefab;
+    Animator animator;
     
     // set to false by default
     public bool antiGravAvailable = false;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         projectileNum = startProjectileNum;
 
         playerSprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Awake()
@@ -56,6 +58,12 @@ public class PlayerController : MonoBehaviour
         instance = this;
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
+    }
+    
+    // for animations
+    void FixedUpdate()
+    {
+        animator.SetFloat("Speed", rigidbody.velocity.magnitude);
     }
 
     // Update is called once per frame
