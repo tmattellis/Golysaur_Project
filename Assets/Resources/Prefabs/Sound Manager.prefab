@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -143,3 +143,9 @@ MonoBehaviour:
   fireballSound: {fileID: 8300000, guid: 763c87cdeacdbea4aaf6f8b3b24fa74f, type: 3}
   arrowSound: {fileID: 8300000, guid: 01f98b8ab7179ad4286288e79af717ed, type: 3}
   impactSound: {fileID: 8300000, guid: 9ecb003a7223c5a40ba867f21aa50fc1, type: 3}
+  flySound: {fileID: 8300000, guid: 3321770c78d4c8e48bcb9429aa1cd4c5, type: 3}
+  sideSound: {fileID: 8300000, guid: 619e0ff677b53814fbb5d66a4d2e9fc3, type: 3}
+  upSound: {fileID: 8300000, guid: 463f56591b358414db725ce09aa4c0a0, type: 3}
+  powerSound: {fileID: 8300000, guid: 3c14811660f4c64419eb2129e8775439, type: 3}
+  whatSound: {fileID: 8300000, guid: 5e75d313a6f4cd446afd662b8b1ac99b, type: 3}
+  groundSound: {fileID: 8300000, guid: 18d02a1c1a8377545a853be447974285, type: 3}
