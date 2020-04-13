@@ -13,7 +13,9 @@ public class GameHandler : MonoBehaviour
 
     void Start(){
         instance = this;
-        Load();
+        if(PlayerController.instance){
+            Load();
+        }
     }
 
     public void Save(){
