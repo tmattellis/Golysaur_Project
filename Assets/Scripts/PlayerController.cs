@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     // for ladder
     bool canClimb = false;
-    float speed = 1;
+    float speed = 1; // assigned but never used?
     private float inputVertical;
 
 

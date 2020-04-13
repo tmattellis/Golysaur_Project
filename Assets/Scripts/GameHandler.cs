@@ -63,6 +63,11 @@ public class GameHandler : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
     }
 
+    public void ClearSaveData()
+    {
+        File.Delete(Application.dataPath + "/Saves/save.txt");
+    }
+
     private class SaveObject {
         public float speedAbility;
         public float jumpAbility;
