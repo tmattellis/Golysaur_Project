@@ -2242,6 +2242,7 @@ MonoBehaviour:
   settingsMenu: {fileID: 1780994743704222166}
   controlsMenu: {fileID: 1780994745148015501}
   isMainMenu: 1
+  gameHandler: {fileID: 0}
 --- !u!222 &1780994745116524093
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2366,7 +2367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1780994745208235458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2406,7 +2407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1780994745252838720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,9 +2615,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Setting 2
-
-'
+  m_Text: Setting 2
 --- !u!224 &1780994745508218734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2703,7 +2702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Setting 3
+  m_Text: Clear Save Data
 --- !u!224 &1780994745689106179
 RectTransform:
   m_ObjectHideFlags: 0
