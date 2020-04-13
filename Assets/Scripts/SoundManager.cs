@@ -11,6 +11,13 @@ public class SoundManager : MonoBehaviour
     public AudioClip arrowSound;
     public AudioClip impactSound;
 
+    public AudioClip flySound;
+    public AudioClip sideSound;
+    public AudioClip upSound;
+    public AudioClip powerSound;
+    public AudioClip whatSound;
+    public AudioClip groundSound;
+
     void Awake()
     {
         instance = this;
@@ -31,6 +38,31 @@ public class SoundManager : MonoBehaviour
     public void PlaySoundImpact()
     {
         audioSource.PlayOneShot(impactSound);
+    }
+
+    public void PlaySoundFly()
+    {
+        audioSource.PlayOneShot(flySound);
+    }
+    public void PlaySoundSideEnemy()
+    {
+        audioSource.PlayOneShot(sideSound);
+    }
+    public void PlaySoundUpEnemy()
+    {
+        audioSource.PlayOneShot(upSound);
+    }
+    public void PlaySoundPowerup()
+    {
+        audioSource.PlayOneShot(powerSound);
+    }
+    public void PlaySoundWhat()
+    {
+        audioSource.PlayOneShot(whatSound);
+    }
+    public void PlaySoundGround()
+    {
+        audioSource.PlayOneShot(groundSound);
     }
 
 

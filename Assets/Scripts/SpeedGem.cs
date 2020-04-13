@@ -9,6 +9,7 @@ public class SpeedGem : MonoBehaviour
     {
         if(other.gameObject.GetComponent<PlayerController>())
         {
+            SoundManager.instance.PlaySoundPowerup();
             Destroy(gameObject);
         }
     }

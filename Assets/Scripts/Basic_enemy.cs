@@ -36,6 +36,7 @@ public class Basic_enemy : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Projectile")){
+            SoundManager.instance.PlaySoundSideEnemy();
             Destroy(gameObject);
         }
     }

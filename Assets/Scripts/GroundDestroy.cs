@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class GroundDestroy : MonoBehaviour
@@ -9,7 +10,7 @@ public class GroundDestroy : MonoBehaviour
     {
         
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +20,7 @@ public class GroundDestroy : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            SoundManager.instance.PlaySoundGround();
             Destroy(gameObject, 1);
         }
     }

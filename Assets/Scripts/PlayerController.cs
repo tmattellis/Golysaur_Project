@@ -268,7 +268,7 @@ public class PlayerController : MonoBehaviour
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		}
+        }
 		//spike
 
 		if (other.gameObject.GetComponent<Spike>())
