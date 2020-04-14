@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public float jumpAbility;
     public float projectileAbility;
     public float powerUpAbility;
+    public float speedAbilityMultiplier = 0.5f;
+    public float jumpAbilityMultiplier = 0.6f;
+    public float projectileAbilityMultiplier = 0.4f;
+    public float powerUpAbilityMultiplier = 2f;
 
     public static PlayerController instance;
 
@@ -91,11 +95,11 @@ public class PlayerController : MonoBehaviour
         {
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.left * (20f + speedAbility) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.left * (10f + speedAbility) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (10f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
         }
 
@@ -104,11 +108,11 @@ public class PlayerController : MonoBehaviour
         {
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.right * (20f + speedAbility) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.right * (10f + speedAbility) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (10f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
         }
 
@@ -127,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * (7f + jumpAbility) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * (7f + jumpAbility*jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -145,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * (7f + jumpAbility) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * (7f + jumpAbility*jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -159,11 +163,11 @@ public class PlayerController : MonoBehaviour
 
                     if (highJumpTimer > 0)
                     {
-                        rigidbody.AddForce(Vector2.up * (14f + jumpAbility) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * (14f + jumpAbility * jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                     }
                     else
                     {
-                        rigidbody.AddForce(Vector2.up * (6f + jumpAbility) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce(Vector2.up * (6f + (jumpAbility*jumpAbilityMultiplier)) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
                     }
                 }
@@ -190,7 +194,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * (5f + projectileAbility);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * (5f + projectileAbility*projectileAbilityMultiplier);
                 projectileNum--;
             }
         }
@@ -203,7 +207,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -(5f+projectileAbility);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -(5f+projectileAbility*projectileAbilityMultiplier);
                 newProjectile.GetComponent<SpriteRenderer>().flipX = true;
                 projectileNum--;
             }
@@ -217,7 +221,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(fireballPrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * (2f+projectileAbility);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * (2f+projectileAbility*projectileAbilityMultiplier);
                 projectileNum--;
             }
         }
@@ -261,17 +265,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.GetComponent<HighJumpGem>())
         {
-            highJumpTimer = 10f + powerUpAbility*2f;
+            highJumpTimer = 10f + powerUpAbility*powerUpAbilityMultiplier;
         }
 
         if (other.gameObject.GetComponent<SpeedGem>())
         {
-            speedTimer = 10f + powerUpAbility*2f;
+            speedTimer = 10f + powerUpAbility*powerUpAbilityMultiplier;
         }
 
         if (other.gameObject.GetComponent<ProjectileStar>())
         {
-            projectileNum += 5 + (int) projectileAbility;
+            projectileNum += 5;
         }
 
 		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
