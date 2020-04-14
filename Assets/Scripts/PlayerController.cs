@@ -176,8 +176,9 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody.gravityScale *= -1;
             gravScale *= -1;
+            transform.localScale = new Vector3(2, 2*gravScale, 1);
             rigidbody.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
-            playerSprite.flipY = !playerSprite.flipY;
+            //playerSprite.flipY = !playerSprite.flipY;
             //transform.rotation = Quaternion.AngleAxis(180, Vector3.right);
         }
 
