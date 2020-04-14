@@ -10,11 +10,16 @@ public class GameHandler : MonoBehaviour
 
     public static GameHandler instance;
     public int curLevels;
+    public float curSpeedAbility;
+    public float curJumpAbility;
+    public float curProjectileAbility;
+    public float curPowerUpAbility;
 
     void Start(){
         instance = this;
+        LoadData();
         if(PlayerController.instance){
-            Load();
+            LoadPlayer();
         }
     }
 
@@ -32,37 +37,37 @@ public class GameHandler : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
     }
 
-    public void Load(){
+    public void LoadData(){
         if(File.Exists(Application.dataPath + "/Saves/save.txt")){
             string loadString = File.ReadAllText(Application.dataPath + "/Saves/save.txt");
-            Debug.Log(loadString);
+            //Debug.Log(loadString);
 
             SaveObject loadObject = JsonUtility.FromJson<SaveObject>(loadString);
 
-            PlayerController.instance.speedAbility = loadObject.speedAbility;
-            PlayerController.instance.jumpAbility = loadObject.jumpAbility;
-            PlayerController.instance.projectileAbility = loadObject.projectileAbility;
-            PlayerController.instance.powerUpAbility = loadObject.powerUpAbility;
-
+            curSpeedAbility = loadObject.speedAbility;
+            curJumpAbility = loadObject.jumpAbility;
+            curProjectileAbility = loadObject.projectileAbility;
+            curPowerUpAbility = loadObject.powerUpAbility;
             curLevels = loadObject.levelsCompleted;
-        
+
+        }
+        else{
+            curSpeedAbility = 2;
+            curJumpAbility = 2;
+            curProjectileAbility = 2;
+            curPowerUpAbility = 2;
+            curLevels = 0;
         }
         
         
     }
 
-    public void SavePlusLevel(){
-        SaveObject saveObject = new SaveObject {
-        speedAbility = PlayerController.instance.speedAbility,
-        jumpAbility = PlayerController.instance.jumpAbility,
-        projectileAbility = PlayerController.instance.projectileAbility,
-        powerUpAbility = PlayerController.instance.powerUpAbility,
-        levelsCompleted = curLevels + 1,
-        };
+    public void LoadPlayer(){
 
-        string json = JsonUtility.ToJson(saveObject);
-
-        File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
+        PlayerController.instance.speedAbility = curSpeedAbility;
+        PlayerController.instance.jumpAbility = curJumpAbility;
+        PlayerController.instance.projectileAbility = curProjectileAbility;
+        PlayerController.instance.powerUpAbility = curPowerUpAbility;
     }
 
     public void ClearSaveData()
