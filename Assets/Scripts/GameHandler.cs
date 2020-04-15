@@ -23,6 +23,20 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    public void NewSave(){
+
+        SaveObject saveObject = new SaveObject {
+        speedAbility = 5,
+        jumpAbility = 5,
+        projectileAbility = 5,
+        powerUpAbility = 5,
+        levelsCompleted = 0,
+        };
+        string json = JsonUtility.ToJson(saveObject);
+
+        File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
+    }
+
     public void Save(){
         SaveObject saveObject = new SaveObject {
         speedAbility = PlayerController.instance.speedAbility,

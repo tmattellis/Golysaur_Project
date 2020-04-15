@@ -108,6 +108,7 @@ public class MenuController : MonoBehaviour
 
     public void NewGame()
     {
+        GameHandler.instance.NewSave();
         LoadThisScene("Tutorial");
     }
 }

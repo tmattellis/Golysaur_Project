@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
         {
             GameHandler.instance.curLevels ++;
             GameHandler.instance.Save();
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Between_Levels");
         }
     }
 

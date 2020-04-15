@@ -6,12 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Title Screen_ Main Menu.unity
     guid: 40faaef3edc187b46925f7b5b5c946c3
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 9cc0d95700f994e4dabd40922e211025
+  - enabled: 1
+    path: Assets/Scenes/Between_Levels.unity
+    guid: cb94fb28d8dcc47f2a8b97876656517f
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level1_Thomas.unity
+    guid: 683853ba59b44084ea3958056fd2aeea
+  - enabled: 1
+    path: Assets/Scenes/Level2_Thomas.unity
+    guid: a4d8cfaf4b238bd40b88e23ef62f12be
+  - enabled: 1
+    path: Assets/Scenes/Level3_Thomas.unity
+    guid: 3674de3f914d33a4490383fa6addfea0
+  - enabled: 1
+    path: Assets/Scenes/Level4_Thomas.unity
+    guid: 949e35a4f850cd44ead050dd57bed522
+  - enabled: 1
+    path: Assets/Scenes/map1_Yuxuan.unity
+    guid: b2af049c7996d416eb5409c53dc6430c
+  - enabled: 1
+    path: Assets/Scenes/map2_Yuxuan.unity
+    guid: 030879ed46e244dfe9d8c3c9d35a1970
+  - enabled: 1
+    path: Assets/Scenes/map3_Yuxuan.unity
+    guid: 045586b4296124db7a2f2cb63dc433e5
+  - enabled: 1
+    path: Assets/Scenes/Zack_Destructible.unity
+    guid: 6d5e0542cecd025489db616cf92f7ab1
+  - enabled: 1
+    path: Assets/Scenes/Zack_Test.unity
+    guid: 1bfef3d834812e04d824104decf782f5
   m_configObjects: {}
