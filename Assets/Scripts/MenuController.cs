@@ -9,7 +9,6 @@ public class MenuController : MonoBehaviour
     
     // outlets
     public GameObject topMenu;
-    public GameObject abilityMenu;
     public GameObject settingsMenu;
     public GameObject controlsMenu;
     public GameObject difficultyMenu;
@@ -70,10 +69,6 @@ public class MenuController : MonoBehaviour
     {
         // turn off all menus
         topMenu.SetActive(false);
-        if (abilityMenu != null)
-        {
-            abilityMenu.SetActive(false);
-        }
         settingsMenu.SetActive(false);
         controlsMenu.SetActive(false);
         difficultyMenu.SetActive(false);
@@ -87,11 +82,7 @@ public class MenuController : MonoBehaviour
     {
         SwitchMenu(topMenu);
     }
-
-    public void ShowAbilityMenu()
-    {
-        SwitchMenu(abilityMenu);
-    }
+    
 
     public void ShowSettingsMenu()
     {
