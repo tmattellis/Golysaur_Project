@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public double highJumpTimer;
     public double speedTimer;
     public double antiGravTimer;
-    
+
     public int projectileNum;
     public int startProjectileNum;
     public int projectileIncrement;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject fireballPrefab;
     Animator animator;
-    
+
     // set to false by default
     public bool antiGravAvailable = false;
 
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
     }
-    
+
     // for animations
     void FixedUpdate()
     {
@@ -84,32 +84,25 @@ public class PlayerController : MonoBehaviour
         {
             MenuController.instance.Show();
         }
-        
+
         //framerate
         if (Application.targetFrameRate > 60)
         {
             Application.targetFrameRate = 60;
         }
-            
+
 
         // move player left
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             playerSprite.flipX = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c834c9d9c8f47b41bbbb83ebe57d3a8965667687
-=======
->>>>>>> c834c9d9c8f47b41bbbb83ebe57d3a8965667687
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.left * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (20f + speedAbility * speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.left * (10f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.left * (10f + speedAbility * speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
         }
 
@@ -119,11 +112,11 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = false;
             if (speedTimer > 0)
             {
-                rigidbody.AddForce(Vector2.right * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (20f + speedAbility * speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
             else
             {
-                rigidbody.AddForce(Vector2.right * (10f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
+                rigidbody.AddForce(Vector2.right * (10f + speedAbility * speedAbilityMultiplier) * Time.deltaTime * 60f);
             }
         }
 
@@ -132,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                
+
                 RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, 1.1f);
 
 
@@ -142,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.left*0.7f + Vector2.up) * (7f + jumpAbility*jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.left * 0.7f + Vector2.up) * (7f + jumpAbility * jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -150,8 +143,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-               
-                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.right, 1.1f); 
+
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, -transform.right, 1.1f);
 
 
                 for (int i = 0; i < hits.Length; i++)
@@ -160,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        rigidbody.AddForce((Vector2.right*0.7f + Vector2.up) * (7f + jumpAbility*jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
+                        rigidbody.AddForce((Vector2.right * 0.7f + Vector2.up) * (7f + jumpAbility * jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                         audiosrc.Play();
 
                     }
@@ -168,20 +161,20 @@ public class PlayerController : MonoBehaviour
             }
             // else
             // {
-                if (jumpsLeft > 0)
-                {
-                    jumpsLeft--;
+            if (jumpsLeft > 0)
+            {
+                jumpsLeft--;
 
-                    if (highJumpTimer > 0)
-                    {
-                        rigidbody.AddForce(Vector2.up * (14f + jumpAbility * jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
-                    }
-                    else
-                    {
-                        rigidbody.AddForce(Vector2.up * (6f + (jumpAbility*jumpAbilityMultiplier)) * gravScale, ForceMode2D.Impulse);
-                        audiosrc.Play();
-                    }
+                if (highJumpTimer > 0)
+                {
+                    rigidbody.AddForce(Vector2.up * (14f + jumpAbility * jumpAbilityMultiplier) * gravScale, ForceMode2D.Impulse);
                 }
+                else
+                {
+                    rigidbody.AddForce(Vector2.up * (6f + (jumpAbility * jumpAbilityMultiplier)) * gravScale, ForceMode2D.Impulse);
+                    audiosrc.Play();
+                }
+            }
             //}
 
 
@@ -206,7 +199,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * (5f + projectileAbility*projectileAbilityMultiplier);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * (5f + projectileAbility * projectileAbilityMultiplier);
                 projectileNum--;
             }
         }
@@ -219,7 +212,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(projectilePrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -(5f+projectileAbility*projectileAbilityMultiplier);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.right * -(5f + projectileAbility * projectileAbilityMultiplier);
                 newProjectile.GetComponent<SpriteRenderer>().flipX = true;
                 projectileNum--;
             }
@@ -233,7 +226,7 @@ public class PlayerController : MonoBehaviour
                 GameObject newProjectile = Instantiate(fireballPrefab);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = transform.rotation;
-                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * (2f+projectileAbility*projectileAbilityMultiplier);
+                newProjectile.GetComponent<Rigidbody2D>().velocity = transform.up * (2f + projectileAbility * projectileAbilityMultiplier);
                 projectileNum--;
             }
         }
@@ -282,12 +275,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.GetComponent<HighJumpGem>())
         {
-            highJumpTimer = 10f + powerUpAbility*powerUpAbilityMultiplier;
+            highJumpTimer = 10f + powerUpAbility * powerUpAbilityMultiplier;
         }
 
         if (other.gameObject.GetComponent<SpeedGem>())
         {
-            speedTimer = 10f + powerUpAbility*powerUpAbilityMultiplier;
+            speedTimer = 10f + powerUpAbility * powerUpAbilityMultiplier;
         }
 
         if (other.gameObject.GetComponent<ProjectileStar>())
@@ -295,29 +288,29 @@ public class PlayerController : MonoBehaviour
             projectileNum += 5;
         }
 
-		if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-		//spike
+        //spike
 
-		if (other.gameObject.GetComponent<Spike>())
+        if (other.gameObject.GetComponent<Spike>())
         {
             TakeDamage(10);
             Debug.Log("Take damage 10");
 
         }
-       
-    }
-   
 
-    
-    
-    
-    void TakeDamage (int dmg)
-	{
-        Health -= dmg; 
- 	}
-    
+    }
+
+
+
+
+
+    void TakeDamage(int dmg)
+    {
+        Health -= dmg;
+    }
+
 
 }
