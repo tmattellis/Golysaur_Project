@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class AbilityManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class AbilityManager : MonoBehaviour
     public int startPowerUpAbility;
     public int startLevels;
 
+
+    public string[] levelOrder = {"Tutorial","Level1_Thomas","Level2_Thomas","Level3_Thomas","Level4_Thomas","map1_Yuxuan","map2_Yuxuan","map3_Yuxuan"};
     // Start is called before the first frame update
     void Start()
     {
@@ -138,6 +141,7 @@ public class AbilityManager : MonoBehaviour
         if (CalculatePointsAvailable() == 0){
             Save();
             //Debug.Log("Go to the next level");
+            SceneManager.LoadScene(levelOrder[startLevels]);
         }
         else{
             Debug.Log(CalculatePointsAvailable().ToString());

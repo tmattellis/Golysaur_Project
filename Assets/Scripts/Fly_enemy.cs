@@ -7,6 +7,9 @@ public class Fly_enemy : MonoBehaviour
 
     Rigidbody2D rigidbody;
 
+    SpriteRenderer m_SpriteRenderer;
+
+
     Transform character;
 
     public float range;
@@ -17,6 +20,7 @@ public class Fly_enemy : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         character = GameObject.Find("Character").transform;
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -40,6 +44,7 @@ public class Fly_enemy : MonoBehaviour
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Projectile")){
             SoundManager.instance.PlaySoundFly();
+            m_SpriteRenderer.color = Color.red;
             Destroy(gameObject, 1.5f);
         }
     }
