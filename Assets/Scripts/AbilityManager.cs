@@ -21,6 +21,7 @@ public class AbilityManager : MonoBehaviour
     public int startProjectileAbility;
     public int startPowerUpAbility;
     public int startLevels;
+    public string startDifficulty;
 
 
     public string[] levelOrder = {"Tutorial","Level1_Thomas","Level2_Thomas","Level3_Thomas","Level4_Thomas","map1_Yuxuan","map2_Yuxuan","map3_Yuxuan"};
@@ -43,6 +44,7 @@ public class AbilityManager : MonoBehaviour
             startProjectileAbility = (int) loadObject.projectileAbility;
             startPowerUpAbility = (int) loadObject.powerUpAbility;
             startLevels = (int) loadObject.levelsCompleted;
+            startDifficulty = loadObject.difficulty;
 
         }
         else{
@@ -51,6 +53,7 @@ public class AbilityManager : MonoBehaviour
             startProjectileAbility = 0;
             startPowerUpAbility = 0;
             startLevels = 0;
+            startDifficulty = "Easy";
         }
         
         
@@ -63,6 +66,7 @@ public class AbilityManager : MonoBehaviour
         projectileAbility = (float)startProjectileAbility,
         powerUpAbility = (float)startPowerUpAbility,
         levelsCompleted = startLevels,
+        difficulty = startDifficulty,
         };
 
         string json = JsonUtility.ToJson(saveObject);
@@ -149,8 +153,16 @@ public class AbilityManager : MonoBehaviour
     }
 
     int CalculatePointsAvailable(){
-        int initPoints = 25;
-
+        int initPoints;
+        if(string.Equals(startDifficulty,"Normal")){
+            initPoints = 35 - 4*startLevels;
+        }
+        else if (string.Equals(startDifficulty,"Hard")){
+            initPoints = 30 - 4*startLevels;
+        }
+        else{
+            initPoints = 35 - 3*startLevels;
+        }
         return initPoints - (startJumpAbility + startPowerUpAbility + startProjectileAbility + startSpeedAbility);
     }
 
@@ -160,5 +172,6 @@ public class AbilityManager : MonoBehaviour
         public float projectileAbility;
         public float powerUpAbility;
         public int levelsCompleted;
+        public string difficulty;
     }
 }
