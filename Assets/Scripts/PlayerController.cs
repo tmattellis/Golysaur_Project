@@ -95,6 +95,7 @@ public class PlayerController : MonoBehaviour
         // move player left
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            playerSprite.flipX = true;
             if (speedTimer > 0)
             {
                 rigidbody.AddForce(Vector2.left * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
@@ -108,6 +109,7 @@ public class PlayerController : MonoBehaviour
         // move player right
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            playerSprite.flipX = false;
             if (speedTimer > 0)
             {
                 rigidbody.AddForce(Vector2.right * (20f + speedAbility*speedAbilityMultiplier) * Time.deltaTime * 60f);
