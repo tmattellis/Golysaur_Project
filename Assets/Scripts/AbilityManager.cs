@@ -24,7 +24,7 @@ public class AbilityManager : MonoBehaviour
     public string startDifficulty;
 
 
-    public string[] levelOrder = {"Tutorial","Level1_Thomas","map1_Yuxuan","Level4_Thomas","Zack_Destructible","Zack_test","Level2_Thomas","Level3_Thomas","map2_replacement","map3_Yuxuan"};
+    public string[] levelOrder = {"Tutorial","Level1_Thomas","map1_Yuxuan","Level4_Thomas","Zack_Destructible","Zack_test","Level2_Thomas","Level3_Thomas","map2_replacement","map3_Yuxuan","Title Screen_ Main Menu"};
     // Start is called before the first frame update
     void Start()
     {
