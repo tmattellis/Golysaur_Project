@@ -36,6 +36,10 @@ public class GameHandler : MonoBehaviour
         };
         string json = JsonUtility.ToJson(saveObject);
 
+        if(!File.Exists(Application.dataPath + "/Saves/save.txt")){
+            File.Create(Application.dataPath + "/Saves/save.txt");
+        }
+
         File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
     }
 
@@ -50,6 +54,10 @@ public class GameHandler : MonoBehaviour
         };
 
         string json = JsonUtility.ToJson(saveObject);
+
+        if(!File.Exists(Application.dataPath + "/Saves/save.txt")){
+            File.Create(Application.dataPath + "/Saves/save.txt");
+        }
 
         File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
     }
