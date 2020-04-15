@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 269140358}
   - component: {fileID: 269140357}
   - component: {fileID: 269140356}
-  m_Layer: 19
+  m_Layer: 13
   m_Name: Spike (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,6 +3831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flywheel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5792863714332464696, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
     - {fileID: 5792863714332464695, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
@@ -3961,7 +3966,7 @@ GameObject:
   - component: {fileID: 1023702697}
   - component: {fileID: 1023702696}
   - component: {fileID: 1023702699}
-  m_Layer: 19
+  m_Layer: 13
   m_Name: Spike (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4847,6 +4852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flywheel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5792863714332464696, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
@@ -7410,6 +7420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flywheel (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5792863714332464696, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
@@ -7807,6 +7822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flywheel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5792863714332464696, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a, type: 3}
@@ -16616,6 +16636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spike
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096697387288457879, guid: 1262aed74c7414fc7aae474537b3d4d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1262aed74c7414fc7aae474537b3d4d1, type: 3}
