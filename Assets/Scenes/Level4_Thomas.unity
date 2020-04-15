@@ -964,6 +964,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 980113661}
     m_Modifications:
+    - target: {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560738565368139605, guid: 97ebf9caf23f74f828767d00de2e162a,
+        type: 3}
+      propertyPath: time_before_turn
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5792863714332464691, guid: 97ebf9caf23f74f828767d00de2e162a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2198,7 +2208,12 @@ PrefabInstance:
     - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
         type: 3}
       propertyPath: speed
-      value: 9
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
+        type: 3}
+      propertyPath: timer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d446003e0374b9b96aea8c7128ca09, type: 3}
@@ -2517,7 +2532,12 @@ PrefabInstance:
     - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
         type: 3}
       propertyPath: speed
-      value: 9
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
+        type: 3}
+      propertyPath: timer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d446003e0374b9b96aea8c7128ca09, type: 3}
@@ -3049,7 +3069,12 @@ PrefabInstance:
     - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
         type: 3}
       propertyPath: speed
-      value: 9
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029599047672313726, guid: c2d446003e0374b9b96aea8c7128ca09,
+        type: 3}
+      propertyPath: timer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d446003e0374b9b96aea8c7128ca09, type: 3}
