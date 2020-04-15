@@ -21,9 +21,9 @@ public class Basic_enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timer += Time.deltaTime;
+        timer += 0.02f;
         rigidbody.AddForce(Vector2.left * signed * speed);
         if (timer > time_before_turn)
         {
