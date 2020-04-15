@@ -45,6 +45,7 @@ public class Fly_enemy : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Projectile")){
             SoundManager.instance.PlaySoundFly();
             m_SpriteRenderer.color = Color.red;
+            this.gameObject.layer = LayerMask.NameToLayer("Ground");
             Destroy(gameObject, 1.5f);
         }
     }
