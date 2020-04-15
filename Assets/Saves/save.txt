@@ -1,1 +1,1 @@
-{"speedAbility":5.0,"jumpAbility":5.0,"projectileAbility":5.0,"powerUpAbility":5.0,"levelsCompleted":0,"difficulty":"Easy"}
+{"speedAbility":10.0,"jumpAbility":10.0,"projectileAbility":4.0,"powerUpAbility":5.0,"levelsCompleted":2,"difficulty":"Easy"}

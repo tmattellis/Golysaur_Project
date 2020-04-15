@@ -3120,7 +3120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topMenu: {fileID: 1780994745208235459}
-  abilityMenu: {fileID: 0}
   settingsMenu: {fileID: 1780994743704222166}
   controlsMenu: {fileID: 1780994745148015501}
   difficultyMenu: {fileID: 1353930900}

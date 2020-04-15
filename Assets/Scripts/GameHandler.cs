@@ -36,11 +36,11 @@ public class GameHandler : MonoBehaviour
         };
         string json = JsonUtility.ToJson(saveObject);
 
-        if(!File.Exists(Application.dataPath + "/Saves/save.txt")){
-            File.Create(Application.dataPath + "/Saves/save.txt");
+        if(!File.Exists(Application.persistentDataPath + "/save.txt")){
+            File.Create(Application.persistentDataPath + "/save.txt").Dispose();
         }
 
-        File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
+        File.WriteAllText(Application.persistentDataPath + "/save.txt", json);
     }
 
     public void Save(){
@@ -55,16 +55,16 @@ public class GameHandler : MonoBehaviour
 
         string json = JsonUtility.ToJson(saveObject);
 
-        if(!File.Exists(Application.dataPath + "/Saves/save.txt")){
-            File.Create(Application.dataPath + "/Saves/save.txt");
+        if(!File.Exists(Application.persistentDataPath + "/save.txt")){
+            File.Create(Application.persistentDataPath + "/save.txt").Dispose();
         }
 
-        File.WriteAllText(Application.dataPath + "/Saves/save.txt", json);
+        File.WriteAllText(Application.persistentDataPath + "/save.txt", json);
     }
 
     public void LoadData(){
-        if(File.Exists(Application.dataPath + "/Saves/save.txt")){
-            string loadString = File.ReadAllText(Application.dataPath + "/Saves/save.txt");
+        if(File.Exists(Application.persistentDataPath + "/save.txt")){
+            string loadString = File.ReadAllText(Application.persistentDataPath + "/save.txt");
             //Debug.Log(loadString);
 
             SaveObject loadObject = JsonUtility.FromJson<SaveObject>(loadString);
@@ -99,7 +99,7 @@ public class GameHandler : MonoBehaviour
 
     public void ClearSaveData()
     {
-        File.Delete(Application.dataPath + "/Saves/save.txt");
+        File.Delete(Application.persistentDataPath + "/save.txt");
     }
 
     public void SetEasy(){
