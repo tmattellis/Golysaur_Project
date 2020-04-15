@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public GameObject abilityMenu;
     public GameObject settingsMenu;
     public GameObject controlsMenu;
+    public GameObject difficultyMenu;
     public bool isMainMenu = false;
 
     public GameHandler gameHandler;
@@ -75,6 +76,7 @@ public class MenuController : MonoBehaviour
         }
         settingsMenu.SetActive(false);
         controlsMenu.SetActive(false);
+        difficultyMenu.SetActive(false);
         
         // turn on one menu
         someMenu.SetActive(true);
@@ -99,6 +101,11 @@ public class MenuController : MonoBehaviour
     public void ShowControlsMenu()
     {
         SwitchMenu(controlsMenu);
+    }
+
+    public void ShowDifficultyMenu()
+    {
+        SwitchMenu(difficultyMenu);
     }
 
     public void LoadThisScene(string sceneName)

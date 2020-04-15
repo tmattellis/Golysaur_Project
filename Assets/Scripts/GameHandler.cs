@@ -14,6 +14,7 @@ public class GameHandler : MonoBehaviour
     public float curJumpAbility;
     public float curProjectileAbility;
     public float curPowerUpAbility;
+    public string curDifficulty;
 
     void Start(){
         instance = this;
@@ -31,6 +32,7 @@ public class GameHandler : MonoBehaviour
         projectileAbility = 5,
         powerUpAbility = 5,
         levelsCompleted = 0,
+        difficulty = curDifficulty,
         };
         string json = JsonUtility.ToJson(saveObject);
 
@@ -44,6 +46,7 @@ public class GameHandler : MonoBehaviour
         projectileAbility = PlayerController.instance.projectileAbility,
         powerUpAbility = PlayerController.instance.powerUpAbility,
         levelsCompleted = curLevels,
+        difficulty = curDifficulty,
         };
 
         string json = JsonUtility.ToJson(saveObject);
@@ -63,6 +66,7 @@ public class GameHandler : MonoBehaviour
             curProjectileAbility = loadObject.projectileAbility;
             curPowerUpAbility = loadObject.powerUpAbility;
             curLevels = loadObject.levelsCompleted;
+            curDifficulty = loadObject.difficulty;
 
         }
         else{
@@ -71,6 +75,7 @@ public class GameHandler : MonoBehaviour
             curProjectileAbility = 2;
             curPowerUpAbility = 2;
             curLevels = 0;
+            curDifficulty = "Easy";
         }
         
         
@@ -89,11 +94,24 @@ public class GameHandler : MonoBehaviour
         File.Delete(Application.dataPath + "/Saves/save.txt");
     }
 
+    public void SetEasy(){
+        curDifficulty = "Easy";
+    }
+
+    public void SetNormal(){
+        curDifficulty = "Normal";
+    }
+
+    public void SetHard(){
+        curDifficulty = "Hard";
+    }
+
     private class SaveObject {
         public float speedAbility;
         public float jumpAbility;
         public float projectileAbility;
         public float powerUpAbility;
         public int levelsCompleted;
+        public string difficulty;
     }
 }
